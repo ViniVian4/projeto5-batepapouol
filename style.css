@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f3f3f3;
+}
+
+p {
+    word-break: break-all;
+}
+
+.barra-do-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    position: fixed;
+    top: 0;
+    z-index: 2;
+
+    width: 100%;
+    height: 80px;
+
+    box-shadow: 0 0 15px 4px rgb(231, 225, 225);
+
+    background-color: #FFFFFF;
+}
+
+.barra-do-topo img {
+    margin-left: 5%;
+    margin-top: 3%;
+}
+
+.barra-do-topo ion-icon {
+    font-size: 50px;
+    margin-right: 5%;
+}
+
+.caixa-de-mensagens {
+    display: flex;
+    flex-direction: column;
+
+    overflow-y: scroll;
+
+    width: 100%;
+
+    margin-top: 110px;
+    margin-bottom: 80px;
+}
+
+.caixa-de-mensagens > div {
+    display: flex;
+    flex-wrap: wrap;
+    
+    padding: 13px;
+
+    margin-bottom: 5px;
+}
+
+.caixa-de-mensagens p{    
+    font-size: 14px;
+
+    color: #000000;
+}
+
+.status {
+    background-color: #DCDCDC;
+}
+
+.message {
+    background-color: #FFFFFF;
+}
+
+.private_message {
+    background-color: #FFDEDE;
+}
+
+.hora {
+    color: #AAAAAA;
+}
+
+.nome {
+    font-weight: bold;
+}
+
+.barra-inferior {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: fixed;
+    bottom: 0;
+    z-index: 2;
+
+    width: 100%;
+    height: 80px;
+
+    box-shadow: 0 0 15px 4px rgb(231, 225, 225);
+
+    background-color: #FFFFFF;
+}
+
+.barra-inferior input:nth-child(1) {
+    margin-left: 4%;
+
+    border: none;
+    outline: none;
+
+    font-size: 18px;
+}
+
+.barra-inferior input::placeholder {
+    color: #000000;
+    font-style: italic;
+}
+
+.barra-inferior input:nth-child(2) {
+    margin-right: 4%;
+}
