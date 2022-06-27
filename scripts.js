@@ -77,3 +77,11 @@ function enviaMsg () {
     
     axios.post("https://mock-api.driven.com.br/api/v6/uol/messages", msg);
 }
+
+let input = document.querySelector(".texto-msg");
+input.addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      enviaMsg();
+    }
+  });
