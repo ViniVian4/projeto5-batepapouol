@@ -4,11 +4,61 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #f3f3f3;
+    background-color: #FFFFFF;
 }
 
 p {
     word-break: break-all;
+}
+
+.tela-inicial {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    background-color: #FFFFFF;
+}
+
+.tela-inicial img:nth-child(1) {
+    width: 150px;
+    height: 100px;
+
+    margin-top: 90px;
+}
+
+.tela-inicial input {
+    height: 55px;
+    width: 70%;
+
+    margin-top: 50px;
+
+    text-align: center;
+
+    outline: none;
+
+    font-size: 18px;
+
+    border: 1px solid #D7D7D7;
+}
+
+.tela-inicial button {
+    height: 50px;
+    width: 110px;
+
+    font-size: 18px;
+
+    margin-top: 15px;
+    
+    border: 1px solid black;
+    border-radius: 10px;
+    
+    background-color: #E7E7E7;
+    color: #696969;
+}
+
+.chat-uol {
+    display: none;
 }
 
 .barra-do-topo {
@@ -48,6 +98,8 @@ p {
 
     margin-top: 110px;
     margin-bottom: 80px;
+
+    background-color: #f3f3f3;
 }
 
 .caixa-de-mensagens > div {

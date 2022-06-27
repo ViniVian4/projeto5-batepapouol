@@ -4,11 +4,21 @@ let usuario = {
 let estado = 0;
 let chat = ``;
 
-login();
+let inputLogin = document.querySelector(".campo-nome");
+inputLogin.addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      login();
+    }
+  });
 
-function login () {
-    
-    usuario.name = prompt("Digite seu nome:");
+function login () {    
+    usuario.name = String(document.querySelector(".campo-nome").value);
+
+    document.querySelector(".tela-inicial").innerHTML = 
+    `<img src="./Imagens/logo 1.png" alt="">
+    <img src="./Imagens/Spinner-1s-200px.gif" alt="">
+    <p>Entrando...</p>`;
 
     const promise = axios.post("https://mock-api.driven.com.br/api/v6/uol/participants", usuario);    
 
@@ -18,6 +28,10 @@ function login () {
 
 function usuarioLogou () {
     console.log("entrou");
+    buscaMsg();
+
+    document.querySelector(".tela-inicial").style.display = "none";
+    document.querySelector(".chat-uol").style.display = "initial";
 
     setInterval(mantemLogado, 5000);
     setInterval(buscaMsg, 3000);
@@ -27,7 +41,7 @@ function trataErroLogin (erro){
     estado = Number(erro.response.status);
     if (estado !== 200){
         alert("Já existe alguém com esse nome");
-        login();
+        document.location.reload();
     }    
 }
 
