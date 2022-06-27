@@ -17,6 +17,7 @@ function login () {
 
 function usuarioLogou () {
     console.log("entrou");
+    setInterval(mantemLogado, 5000);
 }
 
 function trataErroLogin (erro){
@@ -25,4 +26,9 @@ function trataErroLogin (erro){
         alert("Já existe alguém com esse nome");
         login();
     }    
+}
+
+function mantemLogado () {
+    const promise = axios.post("https://mock-api.driven.com.br/api/v6/uol/status", usuario);
+    console.log("ta logado");
 }
