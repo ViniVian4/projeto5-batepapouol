@@ -27,7 +27,6 @@ function login () {
 }
 
 function usuarioLogou () {
-    console.log("entrou");
     buscaMsg();
 
     document.querySelector(".tela-inicial").style.display = "none";
@@ -47,7 +46,6 @@ function trataErroLogin (erro){
 
 function mantemLogado () {
     const promise = axios.post("https://mock-api.driven.com.br/api/v6/uol/status", usuario);
-    console.log("ta logado");
 }
 
 function buscaMsg (){
@@ -77,7 +75,6 @@ function autoScroll () {
     const last = aux2[aux2.length - 1];
 
     last.scrollIntoView();
-    console.log("atualizou chat");
 }
 
 function enviaMsg () {
