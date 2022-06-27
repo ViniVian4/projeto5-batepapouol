@@ -90,6 +90,7 @@ function enviaMsg () {
     };
     
     axios.post("https://mock-api.driven.com.br/api/v6/uol/messages", msg);
+    document.querySelector(".texto-msg").value = "";
 }
 
 let input = document.querySelector(".texto-msg");
