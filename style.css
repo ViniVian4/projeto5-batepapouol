@@ -116,6 +116,8 @@ p {
     font-style: italic;
 }
 
-.barra-inferior input:nth-child(2) {
+.barra-inferior button {
+    border: none;
     margin-right: 4%;
+    background-color: #FFFFFF;
 }

@@ -65,3 +65,15 @@ function autoScroll () {
     last.scrollIntoView();
     console.log("atualizou chat");
 }
+
+function enviaMsg () {
+    let texto = String(document.querySelector(".texto-msg").value);
+    let msg = {
+        from: usuario.name,
+        to: "todos",
+        text: texto,
+        type: "message"
+    };
+    
+    axios.post("https://mock-api.driven.com.br/api/v6/uol/messages", msg);
+}
